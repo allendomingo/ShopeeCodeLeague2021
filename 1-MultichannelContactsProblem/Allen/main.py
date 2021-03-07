@@ -29,7 +29,7 @@ class DisjointSet(object):
 pd.set_option('display.max_rows', 50)
 
 # read data from input
-df = pd.read_json(r'E:\\Cedrick\\Documents\\Github Projects\\ShopeeCodeLeague2021\\1-MultichannelContactsProblem\\contact.json')
+df = pd.read_json(r'input_path')
 N = len(df.index)
 
 # isolate into the 3 contact columns and drop empty values
@@ -65,4 +65,4 @@ for set_item in reduced_sets.list_groups():
 # parse into a dataframe and export to csv
 df_final = pd.DataFrame(enumerate(adjacency_column), columns=['ticket_id', 'ticket_trace/contact'])
 print(df_final)
-# df_final.to_csv('path' + datetime.today().strftime("%d-%m-%YT%H-%M-%S") + '.csv', index=False)
+# df_final.to_csv('output_path' + datetime.today().strftime("%d-%m-%YT%H-%M-%S") + '.csv', index=False)
