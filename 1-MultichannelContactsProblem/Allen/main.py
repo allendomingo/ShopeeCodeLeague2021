@@ -4,7 +4,7 @@ import numpy as np
 # disjoint set implementation
 class DisjointSet(object):
     def __init__(self,size=1):
-        self.parent = [n for n in range(N)]    
+        self.parent = [n for n in range(size)]    
     
     def find(self, x):
         if (self.parent[x] != x):
