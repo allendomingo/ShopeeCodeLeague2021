@@ -1,1 +1,0 @@
-Replace input_path and output_path to correct paths respectively
